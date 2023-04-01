@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--we use url_for to ensure that your file is used becasue it is a static file in flask-->
+    <link rel="stylesheet" href=" {{ url_for( 'static', filename = 'style.css' ) }} ">
+    <title>PetFax</title>
+</head>
+<body>
+    <h1>
+        Welcome To PetFax
+        </h1>
+
+        {% for pet in pets %}
+        
+        <h2>{{ pet.pet_name }}</h2>
+
+        <img src="{{ url_for('static', filename='assets/') }} {{ pet.pet_photo }}" />
+        <!-- link to the pets to show each one individually-->
+        <a href="/pets/{{ pet.pet_id }}">Want to Know A Fun Fact? <br> Click Here!
+        </a>
+
+        {% endfor %}
+
+        <div class="subimt_link">
+            Have A Fun Fact You Would Like To Share? <br>
+            Click Here To Subimt A Fact About A Pet
+        </div>
+</body>
+</html>

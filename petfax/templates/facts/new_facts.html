@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Fun Facts about The Dogs</title>
+</head>
+<!--create a submit for to allow user to add new facts-->
+<body>
+    <h1>
+        Welcome To PetFax
+    </h1>
+    <div>
+        <p>Have a Fun Fact That You Would Like to Share</p>
+        <br>
+        <p>Please Feel Free to Share Below</p>
+    </div>
+    <div class="facts_form">
+        <form>
+            <label for="submitter">
+                <h3>Dog Name</h3>
+            </label>
+            <input type="text" name="submitter">
+            <br>
+            <label for="fact">
+                <h3>Fact</h3>
+            </label>
+            <textarea name="fact" value="Submit Fact" cols="30" rows="10"></textarea>
+        </form>
+    </div>
+    <div>
+    <a href="/pets">Click Here to Head Back to the PetFax Homepage</a>
+    </div>
+</body>
+</html>
