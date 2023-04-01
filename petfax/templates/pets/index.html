@@ -17,7 +17,7 @@
         
         <h2>{{ pet.pet_name }}</h2>
 
-        <img src="{{ url_for('static', filename='assets/') }} {{ pet.pet_photo }}" />
+        <img src="{{ url_for('static', filename='assets/' ~ pet.pet_photo) }}" />
         <!-- link to the pets to show each one individually-->
         <a href="/pets/{{ pet.pet_id }}">Want to Know A Fun Fact? <br> Click Here!
         </a>
@@ -25,8 +25,10 @@
         {% endfor %}
 
         <div class="subimt_link">
+            <p>
             Have A Fun Fact You Would Like To Share? <br>
-            Click Here To Subimt A Fact About A Pet
+            <a href="/facts/new"> Click Here To Subimt A Fact About A Pet</a>
+            </p>
         </div>
 </body>
 </html>
