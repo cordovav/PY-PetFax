@@ -18,7 +18,7 @@
         <p>Please Feel Free to Share Below</p>
     </div>
     <div class="facts_form">
-        <form>
+        <form action="/facts" method="POST">
             <label for="submitter">
                 <h3>Dog Name</h3>
             </label>
@@ -27,7 +27,9 @@
             <label for="fact">
                 <h3>Fact</h3>
             </label>
-            <textarea name="fact" value="Submit Fact" cols="30" rows="10"></textarea>
+            <textarea name="fact" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" value="Submit Fact">
         </form>
     </div>
     <div>
