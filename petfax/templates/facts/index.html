@@ -9,11 +9,16 @@
     <title>UserFax</title>
 </head>
 <body>
+    <div class="container">
     <h1>Welcome To UserFax</h1>
     <h3>Here are facts submitted by users, just like yourself <br>
         Thanks for sharing it with us!!
     </h3>
 
-
+    {% for fact in facts %}
+    <h4>Submitted by {{fact.submitter}}</h4>
+    {{fact.fact}}
+    {% endfor %}
+</div>
 </body>
 </html>
